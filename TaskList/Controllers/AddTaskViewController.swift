@@ -8,5 +8,15 @@
 import UIKit
 
 class AddTaskViewController: UIViewController {
+    @IBOutlet weak var prioritySegmentedControl: UISegmentedControl!
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBAction func savedButtonPressed(_ sender: Any) {
+        guard let priority = Priority(rawValue: prioritySegmentedControl.selectedSegmentIndex),
+              let title = titleTextField.text else {
+                  return
+              }
+        let task = Task(title: title, priority: priority)
+    }
     
 }
