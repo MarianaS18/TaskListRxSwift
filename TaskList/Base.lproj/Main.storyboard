@@ -32,13 +32,30 @@
                                 <rect key="frame" x="0.0" y="174" width="414" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="zi1-Fo-JNW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="zi1-Fo-JNW" customClass="TaskTableViewCell" customModule="TaskList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zi1-Fo-JNW" id="OPC-Ba-1x4">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgY-qI-bKN">
+                                                    <rect key="frame" x="40" y="11" width="334" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IgY-qI-bKN" secondAttribute="trailing" constant="20" id="0B4-Zp-4lK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IgY-qI-bKN" secondAttribute="bottom" id="2l5-aF-V5F"/>
+                                                <constraint firstItem="IgY-qI-bKN" firstAttribute="leading" secondItem="OPC-Ba-1x4" secondAttribute="leadingMargin" constant="20" id="T21-GF-pmm"/>
+                                                <constraint firstItem="IgY-qI-bKN" firstAttribute="top" secondItem="OPC-Ba-1x4" secondAttribute="topMargin" id="xae-9U-onS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="IgY-qI-bKN" id="xRX-ci-s7h"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
